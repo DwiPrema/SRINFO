@@ -1,0 +1,375 @@
+:root {
+    --bgColor: #000000;
+    --textColor: rgba(255, 255, 255, 0.9);
+    --primaryColor: #f9a825;
+    --secondaryColor: rgba(255, 214, 79, 0.9);
+    --accentColor: #397bc6;
+    --secTextColor: #969696;
+    --bgTable: #242424;
+    --bgTableHover: #363636;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--bgColor);
+    transition: background 0.8s, color 0.8s;
+}
+
+body.light {
+    --bgColor: #FFFFFF;
+    --textColor: #000;
+    --primaryColor: #ffa515;
+    --secondaryColor: #FBCE05;
+    --secTextColor: #343a40;
+    --bgTable: #f9f9f9;
+    --bgTableHover: #e9ecef;
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    border-right: 1px solid #969696;
+    position: sticky;
+    top: 0;
+}
+
+.left-sidebar .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    animation: slideFromLeft 1s backwards;
+}
+
+.left-sidebar .logo h1 {
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 1.938rem;
+    color: var(--textColor);
+    margin: auto 0;
+}
+
+.left-sidebar .logo p {
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    color: var(--textColor);
+    margin: auto 0;
+}
+
+.left-sidebar .logo img {
+    width: 60px;
+}
+
+.line {
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(150, 150, 150);
+}
+
+.left-sidebar .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-sidebar .menu .menu-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.5s;
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.left-sidebar .menu .menu-btn.active {
+    background-color: rgba(251, 206, 5, 0.4);
+}
+
+.left-sidebar .menu .menu-btn:hover {
+    background-color: rgba(251, 206, 5, 0.4);
+}
+
+.left-sidebar .menu a p {
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    font-weight: 700;
+    margin: auto 0;
+}
+
+.left-sidebar .menu a i {
+    font-size: 1.25rem;
+    color: var(--primaryColor);
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.left-sidebar .menu a:hover i {
+    opacity: 1;
+}
+
+.left-sidebar .setting {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.left-sidebar .setting a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.5s;
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.left-sidebar .setting a p {
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    font-weight: 700;
+    margin: auto 0;
+}
+
+.left-sidebar .setting a i {
+    font-size: 1.25rem;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.left-sidebar .setting a:hover {
+    background-color: rgba(66, 66, 66, 0.6);
+}
+
+.left-sidebar .setting #logout:hover {
+    background-color: rgba(201, 46, 46, 0.8);
+}
+
+.content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-section {
+    height: 40vh;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .overlay {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: brightness(60%);
+    border-radius: 15px;
+}
+
+body.light .overlay {
+    backdrop-filter: brightness(90%);
+}
+
+.hero-section h1 {
+    font-family: 'Montserrat';
+    font-size: 2.438rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.hero-section p {
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.popup-detail .popup-container-detail {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bgTable);
+    border-radius: 25px;
+    padding: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.popup-detail .popup-container-detail .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.popup-detail .popup-container-detail .detail h3 {
+    font-family: 'Montserrat';
+    font-size: 2.438rem;
+    font-weight: 800;
+    color: var(--textColor);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.popup-detail .popup-container-detail .detail p {
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    color: var(--textColor);
+    white-space: wrap;
+    width: 100%;
+}
+
+.popup-detail .popup-container-detail .btn-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.popup-detail .popup-container-detail .btn-danger.detail,
+.popup-detail .popup-container-detail .btn-warning-detail {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.popup-detail .popup-container-detail .btn-cancel.detail {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+
+
+@media only screen and (max-width: 1165px) {
+    html {
+        font-size: 85%;
+    }
+
+    .left-sidebar .logo img {
+        width: 50px;
+    }
+}
+
+@media only screen and (max-width: 1045px) {
+
+    .left-sidebar .logo h1 {
+        font-size: 1.25rem;
+    }
+
+    .left-sidebar .logo p {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 945px) {
+    body {
+        display: flex;
+        grid-template-columns: none;
+        font-family: "Montserrat", sans-serif;
+        background-color: var(--bgColor);
+        transition: background 0.8s, color 0.8s;
+    }
+
+    .left-sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        border-right: 1px solid #969696;
+        position: sticky;
+        top: 0;
+        width: auto;
+    }
+
+    .left-sidebar .logo h1 {
+        display: none;
+    }
+
+    .left-sidebar .menu .menu-btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 0.8rem 1rem;
+        width: 100%;
+        border-radius: 5px;
+        transition: 0.5s;
+        text-decoration: none;
+        color: var(--textColor);
+        transition: 0.5s;
+    }
+
+    .content {
+        width: 90%;
+    }
+
+    .left-sidebar .logo {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 65%;
+    }
+}

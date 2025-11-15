@@ -1,0 +1,95 @@
+.table-container {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background-color: var(--bgColor);
+}
+
+.table thead {
+    background-color: #343a40;
+    color: #fff;
+    text-align: left;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.table thead th {
+    padding: 12px 20px;
+}
+
+.table tbody tr {
+    background-color: var(--bgTable);
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+.table tbody tr:hover {
+    background-color: var(--bgTableHover);
+}
+
+.table tbody td {
+    padding: 12px 20px;
+    vertical-align: middle;
+    border-bottom: none;
+    color: var(--textColor);
+}
+
+.table tbody tr td:first-child {
+    font-weight: 600;
+    color: var(--textColor);
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn i {
+    font-size: 1rem;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #212529;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #eeeeee;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #bd2130;
+}
+
+.btn-detail {
+    background-color: #397bc6;
+    color: #fff;
+    border: none;
+}
+
+.btn-detail:hover {
+    background-color: #1d62af;
+}
+
+.text-center {
+    text-align: center;
+    color: #6c757d;
+}

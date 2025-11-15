@@ -1,0 +1,109 @@
+.container-tambah {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--bgTable);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.container-tambah h2 {
+    font-family: 'Montserrat';
+    font-size: 1.938rem;
+    font-weight: 800;
+    color: var(--textColor);
+}
+
+.container-tambah form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.container-tambah form .input-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    width: 350px;
+}
+
+.container-tambah form .input-section .form-select {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: var(--bgColor);
+  font-size: 16px;
+  color: var(--textColor);
+  appearance: none;
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.container-tambah form .input-section .form-select:hover {
+  background-color: var(--bgTableHover);
+}
+
+.container-tambah form .input-section .form-select:focus {
+  outline: none;
+}
+
+.container-tambah form .input-section label {
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--textColor);
+}
+
+.container-tambah form .input-section input {
+    width: 100%;
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    padding: 10px 14px;
+    border: 1px solid var(--textColor);
+    background-color: var(--bgColor);
+    border-radius: 5px;
+    color: var(--textColor);
+}
+
+.container-tambah form .input-section input {
+    outline: none;
+}
+
+.container-tambah form .btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.container-tambah form .btn-success {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    border: none;
+    background-color: rgb(90, 149, 1);
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    color: white;
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+.container-tambah form .btn-secondary {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    border: none;
+    background-color: var(--secondaryColor);
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    color: #000000;
+    padding: 10px 12px;
+}
