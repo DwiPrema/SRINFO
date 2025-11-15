@@ -1,0 +1,468 @@
+:root {
+    --bgBlur: rgba(0, 0, 0, 0.4);
+    --textColor: #000000;
+    --secTextColor: rgb(255, 255, 255);
+    --primaryColor: #f9a825;
+    --secondaryColor: #ffd54f;
+    --accentColor: #1565c0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat';
+    color: var(--textColor);
+    background-image: url("../assets/hero-img3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 100vh;
+    max-height: fit-content;
+    overflow-y: scroll;
+}
+
+body.light {
+    --bgBlur: rgba(255, 255, 255, 0.9);
+    --textColor: rgb(255, 255, 255);
+    --secTextColor: #000000;
+    --primaryColor: #f9a825;
+    --secondaryColor: #ffd54f;
+    --accentColor: #1565c0;
+}
+
+input::placeholder {
+    color: var(--secTextColor);
+    opacity: 0.8;
+}
+
+.card-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 80%;
+    height: 80vh;
+    max-height: max-content;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 60px;
+    margin: 2rem 0;
+    transition: 0.7s ease-in-out;
+    z-index: 1;
+    border: 4px solid #f9a825;
+    padding: 0;
+    backdrop-filter: blur(10px);
+    background-color: var(--bgBlur);
+    box-shadow: 0px 0px 10px #000000;
+}
+
+.card-container .overlay-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: var(--primaryColor);
+    border-radius: 0 200px 200px 0;
+    width: 50%;
+    transition: all 0.7s ease-in-out;
+    animation: width 1s;
+}
+
+.card-container .overlay-side .sidetext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.card-container .overlay-side .sidetext h1 {
+    font-family: "Montserrat";
+    font-size: 1.938rem;
+    font-weight: 900;
+    color: var(--textColor);
+}
+
+.card-container .overlay-side .sidetext p {
+    font-family: "Ubuntu";
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--textColor);
+}
+
+.card-container .overlay-side .sidetext .btn-back {
+    font-family: "Ubuntu";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1rem;
+    width: 140px;
+    height: 40px;
+    border-radius: 15px;
+    outline: none;
+    background-color: var(--primaryColor);
+    transition: 0.3s;
+    transform: translateY(-3px);
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0px 3px 0px 2px var(--textColor);
+    color: var(--textColor);
+    border: 0.2px solid var(--textColor);
+}
+
+.card-container .overlay-side .sidetext .btn-back:hover {
+    box-shadow: 0px 1.5px 0px 0px var(--textColor);
+    transform: translateY(0);
+}
+
+.card-container .form-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+    height: 100%;
+    padding: 2rem;
+    width: 50%;
+    transition: all 0.7s ease-in-out;
+    animation: opacity 1s backwards 1s;
+}
+
+.card-container .form-part .sign-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.card-container .form-part .sign-card .head {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-container .form-part .sign-card h1 {
+    font-family: "Montserrat";
+    font-size: 1.938rem;
+    font-weight: 800;
+    color: var(--primaryColor);
+    white-space: nowrap;
+}
+
+.card-container .form-part .sign-card p {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--secTextColor);
+}
+
+.card-container .form-part .sign-card .logo-img {
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.card-container .form-part .sign-card .logo-img img {
+    width: 100%;
+}
+
+.card-container .form-part form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card-container .form-part .input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+.card-container .form-part .input-group label {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.card-container .form-part .input-group label i {
+    color: var(--primaryColor);
+}
+
+.card-container .form-part .input-group label h2 {
+    font-family: "Ubuntu";
+    font-size: 1rem;
+    color: var(--primaryColor);
+    font-weight: 800;
+}
+
+.card-container .form-part .input-group input {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid var(--secTextColor);
+    border-radius: 25px;
+    padding: 0 1rem;
+    color: var(--secTextColor);
+    transition: 0.3s;
+}
+
+.card-container .form-part .input-group input:focus {
+    outline: none;
+    border: 1px solid rgba(255, 214, 79, 0.7);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-container .form-part form button {
+    font-family: "Montserrat";
+    height: 40px;
+    color: #000000;
+    background: linear-gradient(135deg, #f8e194, #f9a825);
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.4s ease-in-out;
+    margin: 1rem 0;
+    cursor: pointer;
+    border: 1px solid #000000;
+}
+
+.card-container .form-part form button:hover {
+    background: linear-gradient(40deg,
+            #f8e194 0%,
+            #f9a825 50%,
+            #f8e194 100%);
+    background-size: 200% auto;
+    animation: shine 0.8s ease-out;
+}
+
+.card-container .form-part .option-register {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.card-container .form-part .option-register .line {
+    height: 2px;
+    background-color: var(--secTextColor);
+    border-radius: 25px;
+    width: 100%;
+}
+
+.card-container .form-part .option-register span {
+    white-space: nowrap;
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--secTextColor);
+}
+
+.card-container .form-part .role-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card-container .form-part .role-info h1 {
+    font-family: 'Ubuntu';
+    color: var(--secTextColor);
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.popup {
+    position: absolute;
+    z-index: 9;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+}
+
+.popup .popup-container {   
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    border: 2px solid var(--primaryColor);
+    width: 700px;
+    height: 300px;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--primaryColor);
+    border-radius: 25px;
+}
+
+.popup .popup-container .ket{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.popup .popup-container i {
+    font-size: 7rem;
+    color: rgb(185, 42, 17);
+}
+
+.popup .popup-container h1 {
+    font-family: 'Ubuntu';
+    font-size: 1.938rem;
+    font-weight: 700;
+}
+
+.popup .popup-container a {
+    font-family: "Ubuntu";
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 1165px) {
+    html {
+        font-size: 85%;
+    }
+
+    .body {
+        height: max-content;
+        min-height: 100vh;
+        max-height: fit-content;
+        overflow: auto;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: 80vh;
+        max-height: fit-content;
+        overflow: hidden;
+    }
+
+    .card-container .overlay-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30%;
+        background-color: var(--primaryColor);
+        border-radius: 50px 50px 200px 200px;
+        width: 100%;
+        transition: all 0.7s ease-in-out;
+        animation: height 1s;
+    }
+
+    .card-container .form-part {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1rem;
+        padding: 2rem;
+        width: 100%;
+        transition: all 0.7s ease-in-out;
+        animation: slideFromBottom 1.6s ease;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+
+    .card-container {
+        height: 90vh;
+    }
+
+    html {
+        font-size: 75%;
+    }
+
+    .card-container {
+        height: 85vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-container .overlay-side {
+        display: none;
+    }
+
+    .card-container .form-part {
+        padding: 2rem;
+        gap: 2rem;
+        justify-content: space-around;
+        height: 100%;
+    }
+
+    .card-container .form-part .sosial-media {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .card-container .form-part .sosial-media button {
+        flex: unset;
+        width: 100%;
+        min-width: unset;
+        max-width: unset;
+        padding: 0.5rem;
+        height: auto;
+    }
+
+    .card-container .form-part .sosial-media button i {
+        font-size: 2rem;
+    }
+
+    .card-container .form-part .sosial-media button h2 {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 65%;
+    }
+
+    body {
+        align-items: flex-end;
+        height: fit-content;
+    }
+
+    .card-container {
+        width: 100%;
+        margin: 0;
+        margin-top: 20%;
+        border: none;
+        border-radius: 50px 50px 0px 0px;
+        border-top: 2px solid #f9a825;
+        overflow: auto;
+        height: max-content;
+    }
+
+}

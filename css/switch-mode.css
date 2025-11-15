@@ -1,0 +1,70 @@
+.toggle-mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  top: 1%;
+  right: 1%;
+}
+
+.toggle-mode .btn-mode {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: var(--bgColor);
+  transition: 0.3s;
+  border: 2px solid var(--accentColor);
+}
+
+.toggle-mode .btn-mode .img-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+  transition: 0.3s;
+}
+
+.toggle-mode .btn-mode .img-container img {
+  width: 30px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50px;
+  background-color: var(--accentColor);
+  padding: 3px;
+}
+
+.toggle-mode .btn-mode .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.toggle-mode .btn-mode .text p {
+  font-family: 'Ubuntu';
+  font-size: 1rem;
+  color: var(--textColor);
+  padding: 0 15px;
+}
+
+.btn-mode.active .img-container{
+  width: 100%;
+}
+
+.btn-mode.active .text {
+  width: 0;
+  overflow: hidden;
+  padding: 0;
+  opacity: 0;
+}
+
+.btn-mode.reverse {
+  flex-direction: row-reverse;
+}
