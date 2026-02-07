@@ -89,8 +89,6 @@
         </div>
     </section>
 
-
-    <!-- <script src="js/login.js"></script> -->
     <script src="../js/switchMode.js"></script>
 </body>
 

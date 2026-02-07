@@ -141,18 +141,15 @@ document.addEventListener("DOMContentLoaded", () => {
            SEARCH HANDLER
     ============================= */
     searchInput.addEventListener("keyup", () => {
-        const cari = searchInput.value;
+    const value = searchInput.value.toLowerCase();
+    const rows = document.querySelectorAll("#tableBody tr");
 
-        // ✅ reset filter saat search
-        filterSelect.value = "none";
-
-        fetch("jurnal_fetch.php?cari=" + encodeURIComponent(cari))
-            .then(res => res.text())
-            .then(data => {
-                tableBody.innerHTML = data;
-                toggleButton.style.display = "none";   // search tidak butuh toggle
-            });
+    rows.forEach(row => {
+        row.style.display = row.textContent.toLowerCase().includes(value)
+            ? ""
+            : "none";
     });
+});
 
 });
 
